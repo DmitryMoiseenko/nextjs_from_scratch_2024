@@ -1,0 +1,1 @@
+# nextjs_from_scratch_2024
