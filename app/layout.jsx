@@ -1,23 +1,26 @@
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import '@/assets/styles/globals.css'
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import AuthProvider from "@/components/authProvider";
+import "@/assets/styles/globals.css";
 
 export const metadata = {
-    title: 'PropertyPulse | Find The Perfect Rental',
-    descrition: 'Find your dream rental property',
-    keywords: 'rental, find rentals, find properties'
-}
+  title: "PropertyPulse | Find The Perfect Rental",
+  descrition: "Find your dream rental property",
+  keywords: "rental, find rentals, find properties",
+};
 
 const MainLayout = ({ children }) => {
   return (
-    <html lang="en">
+    <AuthProvider>
+      <html lang="en">
         <body>
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
         </body>
-    </html>
-  )
-}
+      </html>
+    </AuthProvider>
+  );
+};
 
-export default MainLayout
+export default MainLayout;
