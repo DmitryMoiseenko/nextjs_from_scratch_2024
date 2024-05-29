@@ -6,7 +6,7 @@ import { getSessionUser } from '@/utils/getSessionUser';
 export const GET = async (request, { params }) => {
     try {
         await connectDB();
-
+        
         const property = await Property.findById(params.id);
 
         if (!property) {
